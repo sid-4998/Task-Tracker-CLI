@@ -1,0 +1,16 @@
+{
+  "name": "task-tracker-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to manage your to-do lists.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Siddhant Jha",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
+}

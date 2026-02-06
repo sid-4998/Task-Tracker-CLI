@@ -1,5 +1,6 @@
 import readline from 'readline';
 import chalk from 'chalk';
+import addTask from './modules/addTask.js';
 
 console.log("=".repeat(20) + chalk.blue(' Welcome to Task Tracker CLI ') + "=".repeat(20));
 console.log("*".repeat(3) + (' Instructions') + ":");
@@ -37,8 +38,12 @@ const taskCLI = readline.createInterface({
 taskCLI.prompt();
 
 taskCLI.on('line', (line) => {
-    const data = line.trim();
-    console.log(data);
+    let index = line.trim().indexOf(' ');
+    const data = line.trim().slice(0,index);
+    
+    if(data === 'add') {
+        addTask(line.trim().slice(index+1).trim());
+    }
     taskCLI.prompt();
 });
 
